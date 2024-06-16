@@ -18,7 +18,15 @@ $$F[\theta] = \int\limits_{-L}^{L} \left(\left(\frac{\partial \theta}{\partial x
 
 $$\mathscr{L} \theta = \frac{\partial^2 \theta}{\partial x^2} - \sin(\theta)\cos(\theta) = 0$$
 
-Такой метод в литературе получил название physics informed neural network (PINN).
+Такой метод, использующий нейронную сеть как аппроксиматор,  в литературе получил название **physics informed neural network (PINN)**.
+
+ ## Методология
+
+ Для аппроксимации функции $\theta(x)$ мы используем полносвязную нейронную сеть с механизмом skip connection:
+
+<p align="center">
+  <img src="pics/net.png" alt="drawing" width="400" style="rotate(270deg)"/>
+</p>
 
 $$\displaystyle \omega_R(x) = \frac{1}{1+\alpha(x)} \left(2L - \sqrt{(x+L)^2 + (L-x)^2 - 2\alpha(x)(x+L)(L-x)}\right).$$ 
 
